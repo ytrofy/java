@@ -112,9 +112,12 @@ public class Arrays_Handout
 
 	public void displayIntArray(int[] array)
 	{
+		//This basic for loop steps through each element of the array, displaying the element number and value.
+		//It will continue until the index is no longer < the array size, which indicates the end of the array.
+		
 		for(i = 0; i < array.length(); i++)
 		{
-			JOptionPane.showMessageDialog(null, "Element: " + (i + 1) + " Value: " + array[i]);
+			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
 		}
 	}
 	
