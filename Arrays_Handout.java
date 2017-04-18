@@ -34,10 +34,17 @@
 
 public class Arrays_Handout
 {
-   public static void main(String[] args)
-   {
-      //Initialize array and pass it to a method to display it.
-      
-      //Have a method to fill an array and return it to main, then pass to display method.
-   }
+	public static void main(String[] args)
+	{
+		int[] numbers;
+		//Declares a reference variable called "numbers" that points to an array of integers.
+	   
+		numbers = new int[5];
+		//Create an array of 5 integers and assign its address to the "numbers" reference variable.
+	   
+		//Note that "numbers" without the [] only holds the address of the array.
+		//Brackets must be used to access the values stored in the array.
+		
+		//Have a method to fill an array and return it to main, then pass to display method.
+	}
 }
