@@ -98,7 +98,7 @@ public class Arrays_Handout
 	{
 		for(i = 0; i < array.length(); i++)
 		{
-			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
+			JOptionPane.showMessageDialog(null, "Element: " + (i + 1) + " Value: " + array[i]);
 		}
 	}
 	
