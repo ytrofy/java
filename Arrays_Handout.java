@@ -60,8 +60,16 @@ public class Arrays_Handout
 		//The subscript can also be a variable, as long as it's an int between 0 and the array size - 1.
 		//The third element, numbers[2], now holds the value 7.
 		
-		//Send numbers[] to display method.
+		displayIntArray(numbers);
 		
 		//Have a method to fill an array and return it to main, then pass to display method.
+	}
+	
+	public void displayIntArray(int[] array)
+	{
+		for(i = 0; i < array.length(); i++)
+		{
+			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
+		}
 	}
 }
