@@ -63,6 +63,22 @@ public class Arrays_Handout
 		displayIntArray(numbers);
 		//Send numbers array to display method.
 		
+		int[] moreNumbers = {1, 2, 3, 4, 5, 6};
+		//Arrays can be initialized with values. Here we created an array of ints called "moreNumbers".
+		//The numbers inside the {} are the values to initialize the array way. Since we entered 6 ints,
+		//the array will be given a size of 6.
+		
+		displayIntArray(moreNumbers);
+		//Send moreNumbers array to display method.
+		
+		int[9] evenMoreNumbers = {1, 2, 3, 4};
+		//Here we specified a size while initializing an array. The 9 inside the [] overrides the default size
+		//that would be given when intializing 4 values. The first 4 elements will be what is inside the {}.
+		//The last 5 elements are not intialized and will be given default values of 0.
+		
+		displayIntArray(evenMoreNumbers);
+		//Send numbers array to display method.
+		
 		
 		
 		//Have a method to fill an array and return it to main, then pass to display method.
