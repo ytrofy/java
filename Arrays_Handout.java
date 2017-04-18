@@ -52,7 +52,7 @@ public class Arrays_Handout
 		//The last element of an array is the array size - 1.
 		
 		int x = 10;
-		numbers[1] = x
+		numbers[1] = x;
 		//Variables can also be assigned to array elements. The 2nd element now holds the value 10.
 		
 		int i = 2;
