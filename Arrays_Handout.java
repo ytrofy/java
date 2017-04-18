@@ -61,6 +61,9 @@ public class Arrays_Handout
 		//The third element, numbers[2], now holds the value 7.
 		
 		displayIntArray(numbers);
+		//Send numbers array to display method.
+		
+		
 		
 		//Have a method to fill an array and return it to main, then pass to display method.
 		
@@ -91,4 +94,12 @@ public class Arrays_Handout
 		
 	}
 
+	public void displayIntArray(int[] array)
+	{
+		for(i = 0; i < array.length(); i++)
+		{
+			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
+		}
+	}
+	
 }
