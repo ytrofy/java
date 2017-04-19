@@ -31,11 +31,14 @@
 *******************************************************************************
 *******************************************************************************
 ******************************************************************************/
-
+import javax.swing.*;
+import java.util.*;
 public class Arrays_Handout
 {
 	public static void main(String[] args)
 	{
+   Arrays_Handout object = new Arrays_Handout();
+   object.showArrayListsExample();
 		int[] numbers;
 		//Declares a reference variable called "numbers" that points to an array of integers.
 	   
@@ -109,6 +112,33 @@ public class Arrays_Handout
 		
 		
 	}
+   public void showArrayListsExample()
+   {
+      ArrayList<String> list = new ArrayList<String>();
+      JFrame frame = new JFrame();
+      frame.setSize(500,500);
+      frame.setVisible(true);
+      frame.setLocationRelativeTo(null);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      //list.add(34);
+      String element;
+      JOptionPane.showMessageDialog(frame, "Adding as many elements as you want to the ArrayList");
+      while(true)
+      {
+         element = JOptionPane.showInputDialog(frame, "Enter anything(Type close to stop adding elements)):");
+         if (element.equalsIgnoreCase("close"))
+         {
+            break;
+         }
+         list.add(element);
+      }
+      JOptionPane.showMessageDialog(frame, "Displaying the values stored in the ArrayList");
+      for(int x=0; x<list.size();x++)
+      {
+         JOptionPane.showMessageDialog(frame,"Element #"+(x+1)+": "+list.get(x));
+      }
+      
+   }
 
 	public void displayIntArray(int[] array)
 	{
