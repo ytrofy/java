@@ -2,30 +2,30 @@
 *******************************************************************************
 *******************************************************************************
 
-				ID INFORMATION
+			                  ID INFORMATION
 
-	Programmer			:		
-	Assignment #			:		
-	Assignment Name			:		
-	Course # and Title		:		CISC 190 - Java
-	Class Meeting Time		:		TTH 1:00 - 4:05
-	Instructor			:		Professor Forman
-	Hours				:		
-	Difficulty			:		
-	Completion Date			:		04/20/17
-	File Name			:		Arrays_Handout
+	Programmer       	      		:		
+	Assignment #	   	      	:		
+	Assignment Name		      	:		
+	Course # and Title		      :		      CISC 190 - Java
+	Class Meeting Time	      	:		      TTH 1:00 - 4:05
+	Instructor		            	:		      Professor Forman
+	Hours			               	:		
+	Difficulty		             	:		
+	Completion Date		      	:		      04/20/17
+	File Name		            	:	      	Arrays_Handout
 
 *******************************************************************************
 *******************************************************************************
 
-				PROGRAM DESCRIPTION
+				            PROGRAM DESCRIPTION
 	
    
 
 *******************************************************************************
 *******************************************************************************
 
-				CUSTOM-DEFINED METHODS
+				           CUSTOM-DEFINED METHODS
 	
 
 *******************************************************************************
@@ -33,19 +33,23 @@
 ******************************************************************************/
 import javax.swing.*;
 import java.util.*;
+
 public class Arrays_Handout
 {
 	public static void main(String[] args)
 	{
-   Arrays_Handout object = new Arrays_Handout();
-   object.showArrayListsExample();
+      Arrays_Handout object = new Arrays_Handout();
+   
 		int[] numbers;
 		//Declares a reference variable called "numbers" that points to an array of integers.
 	   
 		numbers = new int[3];
 		//Create an array of 3 integers and assign its address to the "numbers" reference variable.
 	   
-		//Note that "numbers" without the [] only holds the address of the array.
+		//The previous 2 lines can also be executed at the same time, like below:
+      //int[] numbers = new int[3];
+      
+      //Note that "numbers" without the [] only holds the address of the array.
 		//Brackets must be used to access the values stored in the array.
 		
 		numbers[0] = 4;
@@ -63,7 +67,7 @@ public class Arrays_Handout
 		//The subscript can also be a variable, as long as it's an int between 0 and the array size - 1.
 		//The third element, numbers[2], now holds the value 7.
 		
-		displayIntArray(numbers);
+		object.displayIntArray(numbers);
 		//Send numbers array to display method.
 		
 		int[] moreNumbers = {1, 2, 3, 4, 5, 6};
@@ -71,47 +75,72 @@ public class Arrays_Handout
 		//The numbers inside the {} are the values to initialize the array way. Since we entered 6 ints,
 		//the array will be given a size of 6.
 		
-		displayIntArray(moreNumbers);
+		object.displayIntArray(moreNumbers);
 		//Send moreNumbers array to display method.
-		
-		int[9] evenMoreNumbers = {1, 2, 3, 4};
-		//Here we specified a size while initializing an array. The 9 inside the [] overrides the default size
-		//that would be given when intializing 4 values. The first 4 elements will be what is inside the {}.
-		//The last 5 elements are not intialized and will be given default values of 0.
-		
-		displayIntArray(evenMoreNumbers);
-		//Send numbers array to display method.
-		
-		
-		
-		//Have a method to fill an array and return it to main, then pass to display method.
+      
+      int size = 5;
+      int[] evenMoreNumbers = new int[size];
+      evenMoreNumbers = object.returnIntArray(size);
+		object.displayIntArray(evenMoreNumbers);
+      //Methods can also return arrays, making them useful for returning multiple values at once.
+      //Here we create a new empty array and deploy a method to fill it with values, and then display it.
+
+
 		
 		
-			   	// what yvans wants to do, the very very basics
-		str[1] = "Is";
-		num[0] = 100;
-		num[1] = 200;
-	
-	   
-		 String[] str = {"Java","Isn't","Awesome"};
-	
-		int[] num = new int[3]
-        
-		JOptionPane.showMessageDialog(null,
-				      "The string list is " + str.length + " words long \n"    // should say 3
-				     +"The integer list is " + num.length + "numbers long \n"  // should say 3
-				     + num[0] + "," +num[1] + "," +num[2] +"\n"  //should say 100, 200, 0
-				     + str[0] + str[1] + str[2]);  //shoud say java is awesome
+		object.showArrayListsExample();
 		
 		
-		
-		
-		
-		
-		
+// 			   	// what yvans wants to do, the very very basics
+// 		str[1] = "Is";
+// 		num[0] = 100;
+// 		num[1] = 200;
+// 	
+// 	   
+// 		 String[] str = {"Java","Isn't","Awesome"};
+// 	
+// 		int[] num = new int[3]
+//         
+// 		JOptionPane.showMessageDialog(null,
+// 				      "The string list is " + str.length + " words long \n"    // should say 3
+// 				     +"The integer list is " + num.length + "numbers long \n"  // should say 3
+// 				     + num[0] + "," +num[1] + "," +num[2] +"\n"  //should say 100, 200, 0
+// 				     + str[0] + str[1] + str[2]);  //shoud say java is awesome
 		
 		
 	}
+   
+   /*****************************************************************************/
+	/*************************START CUSTOM	DEFINED METHODS************************/
+	/*****************************************************************************/
+   
+   public void displayIntArray(int[] array)
+	{
+		//This basic for loop steps through each element of the array, displaying the element number and value.
+		//It will continue until the index is no longer < the array size, which indicates the end of the array.
+		
+		for(int i = 0; i < array.length; i++)
+		{
+			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
+		}
+	}
+
+   public int[] returnIntArray(int size)
+   {
+      int[] newArray = new int[size];
+		//This methods creates an array of the size sent in the argument.
+      
+      for(int i = 0; i < size; i++)
+      {
+         newArray[i] = i * 2;
+      }
+      //The for loop goes through each element and assigns twice the element number to the value of that element.
+      
+      return newArray;
+      //Return works just like any other variable, you just need to make sure the array type matches
+      //the method declaration.
+   }
+   
    public void showArrayListsExample()
    {
       ArrayList<String> list = new ArrayList<String>();
@@ -139,16 +168,8 @@ public class Arrays_Handout
       }
       
    }
-
-	public void displayIntArray(int[] array)
-	{
-		//This basic for loop steps through each element of the array, displaying the element number and value.
-		//It will continue until the index is no longer < the array size, which indicates the end of the array.
-		
-		for(i = 0; i < array.length(); i++)
-		{
-			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
-		}
-	}
-	
+   
+   /*****************************************************************************/
+	/**************************END CUSTOM DEFINED METHODS*************************/
+	/*****************************************************************************/	
 }
