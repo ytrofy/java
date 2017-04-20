@@ -1,34 +1,49 @@
-/******************************************************************************
+/****************************************************************************** 
+******************************************************************************* 
+******************************************************************************* 
+                                                                                
+                   		        ID INFORMATION                                 
+                                                                                
+   Programmer			                  :	    1. Jared Furlong 
+                                                            2. Daimeon Rodriguez
+                                                            3. Robert Cardenes
+                                                            4. Yvan Hanscom-Trofy       
+   Assignment                          :                    Team Project
+   Assignment Name                     :                    Arrays
+   Course # and Title                  :                    CISC 190 - Java
+   Class Meeting Time                  :                    MW 1:00 - 4:05
+   Instructor                          :                    Professor Forman
+   Hours                               :                    1. 
+                                                            2. 
+                                                            3.
+                                                            4. 
+   Difficulty                          :                    1.
+                                                            2.
+                                                            3.
+                                                            4. 
+   Completion Date                     :                    4/20/2017
+   File Name                           :                    Arrays_Handout             
+
 *******************************************************************************
 *******************************************************************************
 
-			                  ID INFORMATION
+                             PROGRAM DESCRIPTION                   
+                              
+                                                 
 
-	Programmer       	      		:		
-	Assignment #	   	      	:		
-	Assignment Name		      	:		
-	Course # and Title		      :		      CISC 190 - Java
-	Class Meeting Time	      	:		      TTH 1:00 - 4:05
-	Instructor		            	:		      Professor Forman
-	Hours			               	:		
-	Difficulty		             	:		
-	Completion Date		      	:		      04/20/17
-	File Name		            	:	      	Arrays_Handout
+*******************************************************************************               
+*******************************************************************************
 
+                          CUSTOMED-DEFINED METHODS LIST 
+                          
+                            
 *******************************************************************************
 *******************************************************************************
 
-				            PROGRAM DESCRIPTION
-	
-   
-
-*******************************************************************************
-*******************************************************************************
-
-				           CUSTOM-DEFINED METHODS
-	
-
-*******************************************************************************
+                                    CREDITS
+                                    
+                                  
+                                    
 *******************************************************************************
 ******************************************************************************/
 import javax.swing.*;
@@ -40,6 +55,8 @@ public class Arrays_Handout
 	{
       Arrays_Handout object = new Arrays_Handout();
    
+		basicArrays();
+		
 		int[] numbers;
 		//Declares a reference variable called "numbers" that points to an array of integers.
 	   
@@ -91,21 +108,7 @@ public class Arrays_Handout
 		object.showArrayListsExample();
 		
 		
-// 			   	// what yvans wants to do, the very very basics
-// 		str[1] = "Is";
-// 		num[0] = 100;
-// 		num[1] = 200;
-// 	
-// 	   
-// 		 String[] str = {"Java","Isn't","Awesome"};
-// 	
-// 		int[] num = new int[3]
-//         
-// 		JOptionPane.showMessageDialog(null,
-// 				      "The string list is " + str.length + " words long \n"    // should say 3
-// 				     +"The integer list is " + num.length + "numbers long \n"  // should say 3
-// 				     + num[0] + "," +num[1] + "," +num[2] +"\n"  //should say 100, 200, 0
-// 				     + str[0] + str[1] + str[2]);  //shoud say java is awesome
+
 		
 		
 	}
@@ -113,7 +116,51 @@ public class Arrays_Handout
    /*****************************************************************************/
 	/*************************START CUSTOM	DEFINED METHODS************************/
 	/*****************************************************************************/
-   
+    
+    //*********************************************************************************************** 
+    //NAME:	  basicArrays 
+    //DESCRIPTION: shows the basic array structure and how to create, edit, overwrite them, and pul
+    // 		   the information
+    //BY: Yvan Hanscom-Trofy
+    //*********************************************************************************************** 
+ 
+   public void basicArrays()
+   {
+		//////////////////////////////////////////////////////////////////////////////
+	
+		//		LOCAL VARIABLE/OBJECT DECLARATIONS 
+	
+		//////////////////////////////////////////////////////////////////////////////
+	   
+ 	int[] num = new int[3] //the 3 is the amount of variable in that array
+        String[] str = {"Java","Isn't","Awesome"};     //creating an array and defining at the same time
+	   //////////////////////////////////////////////////////////////////////////////////////////
+	   
+	        //assigning the  variables to specific places in the array
+ 		num[0] = 100;
+ 		num[1] = 200;	   
+	   
+        	str[1] = "Is";  //what is this doing?
+
+         
+ 		JOptionPane.showMessageDialog(null,
+ 				      "The string list is " + str.length + " words long \n"    // should say 3
+ 				     +"The integer list is " + num.length + " numbers long \n"  // should say 3
+ 				     + num[0] + " ," +num[1] + " ," +num[2] +"\n"  //should say 100, 200, 0
+ 				     + str[0] +" "+ str[1] +" "+ str[2]);  //shoud say java is awesome
+   }
+	
+	
+	
+	
+	
+	
+    //*********************************************************************************************** 
+    //NAME:	  displayIntArray 
+    //DESCRIPTION: 
+    //BY: 
+    //***********************************************************************************************	
+	
    public void displayIntArray(int[] array)
 	{
 		//This basic for loop steps through each element of the array, displaying the element number and value.
@@ -124,7 +171,12 @@ public class Arrays_Handout
 			JOptionPane.showMessageDialog(null, "Element: " + i + " Value: " + array[i]);
 		}
 	}
-
+    //*********************************************************************************************** 
+    //NAME:	  returnIntArray 
+    //DESCRIPTION: 
+    //BY: 
+    //***********************************************************************************************
+	
    public int[] returnIntArray(int size)
    {
       int[] newArray = new int[size];
@@ -140,7 +192,13 @@ public class Arrays_Handout
       //Return works just like any other variable, you just need to make sure the array type matches
       //the method declaration.
    }
-   
+
+    //*********************************************************************************************** 
+    //NAME:	  showArrayListsExample 
+    //DESCRIPTION: 
+    //BY: 
+    //***********************************************************************************************
+	
    public void showArrayListsExample()
    {
       ArrayList<String> list = new ArrayList<String>();
