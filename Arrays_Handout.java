@@ -231,3 +231,6 @@ public class Arrays_Handout
 	/**************************END CUSTOM DEFINED METHODS*************************/
 	/*****************************************************************************/	
 }
+
+//         Everyone you will ever meet knows something you don't.
+//                           -Bill Nye
